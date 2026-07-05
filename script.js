@@ -105,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#gallery')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.setTimeout(() => searchInput?.focus(), 400);
     });
+  });
+
   // Spotlight Effect
   document.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);

@@ -105,5 +105,58 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#gallery')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.setTimeout(() => searchInput?.focus(), 400);
     });
+  // Spotlight Effect
+  document.addEventListener('mousemove', (e) => {
+    document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
   });
+
+  // Typewriter Effect for Search Placeholder
+  const prompts = [
+    "A futuristic cyberpunk city, neon lights...",
+    "Cinematic shot, highly detailed astronaut...",
+    "Epic dark fantasy knight standing before...",
+    "3D Pixar style cute fluffy monster..."
+  ];
+  let promptIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const type = () => {
+    if (!searchInput) return;
+    const currentPrompt = prompts[promptIndex];
+    if (isDeleting) {
+      searchInput.setAttribute('placeholder', currentPrompt.substring(0, charIndex - 1));
+      charIndex--;
+    } else {
+      searchInput.setAttribute('placeholder', currentPrompt.substring(0, charIndex + 1));
+      charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 30 : 80;
+
+    if (!isDeleting && charIndex === currentPrompt.length) {
+      typeSpeed = 2000; // Pause at end
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      promptIndex = (promptIndex + 1) % prompts.length;
+      typeSpeed = 500; // Pause before new word
+    }
+    setTimeout(type, typeSpeed);
+  };
+  setTimeout(type, 1000);
+
+  // Scroll Reveal Animations
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
 });

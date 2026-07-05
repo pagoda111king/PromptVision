@@ -5,7 +5,7 @@ const promptData = [
         category: "cinematic",
         categoryLabel: "好莱坞电影",
         title: "赛博朋克风格未来城市街道",
-        image: "images/1.png",
+        image: "images/cyberpunk.png",
         prompt: "\"A futuristic cyberpunk city street raining neon lights, reflective wet ground, hyper realistic, cinematic lighting, 8k, Unreal Engine 5.\""
     },
     {
@@ -13,7 +13,7 @@ const promptData = [
         category: "cinematic",
         categoryLabel: "好莱坞电影",
         title: "科幻宇航员",
-        image: "images/2.png",
+        image: "images/astronaut.png",
         prompt: "\"Cinematic shot of an astronaut looking at a glowing black hole, IMAX 70mm lens, highly detailed, dramatic lighting, interstellar style.\""
     },
     {
@@ -21,7 +21,7 @@ const promptData = [
         category: "darkfantasy",
         categoryLabel: "暗黑奇幻",
         title: "哥特式城堡骑士",
-        image: "images/3.png",
+        image: "images/knight.png",
         prompt: "\"Epic dark fantasy knight standing before a massive gothic castle, glowing red eyes in the dark, cinematic chiaroscuro, highly detailed armor.\""
     },
     {
@@ -29,7 +29,7 @@ const promptData = [
         category: "anime",
         categoryLabel: "动漫",
         title: "日系动漫女孩与猫",
-        image: "images/4.png",
+        image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800&auto=format&fit=crop",
         prompt: "\"Studio Ghibli style, a young girl reading a book next to a giant fluffy cat in a sunlit room, highly detailed, warm anime lighting, masterpiece.\""
     },
     {
@@ -37,7 +37,7 @@ const promptData = [
         category: "pixar",
         categoryLabel: "3D皮克斯",
         title: "可爱怪兽宝宝",
-        image: "images/5.png",
+        image: "images/monster.png",
         prompt: "\"Cute 3D Pixar style fluffy monster baby with big eyes, soft pastel colors, studio lighting, highly detailed 3D render, Octane render.\""
     },
     {
@@ -45,7 +45,7 @@ const promptData = [
         category: "chineseink",
         categoryLabel: "新中式水墨",
         title: "水墨画里的孤舟",
-        image: "images/6.png",
+        image: "https://images.unsplash.com/photo-1577047321590-3490ea47f523?q=80&w=800&auto=format&fit=crop",
         prompt: "\"Traditional Chinese ink painting of a solitary boat on a misty river, distant mountains, elegant brushstrokes, wuxia aesthetic, highly detailed.\""
     },
     {
@@ -53,7 +53,7 @@ const promptData = [
         category: "macro",
         categoryLabel: "微距写实",
         title: "微距摄影叶片水滴",
-        image: "images/7.png",
+        image: "https://images.unsplash.com/photo-1500673922987-e212871f1a51?q=80&w=800&auto=format&fit=crop",
         prompt: "\"Extreme macro photography of a crystal clear water drop on a bright green leaf, reflecting the forest behind, highly detailed, sharp focus.\""
     },
     {
@@ -61,7 +61,7 @@ const promptData = [
         category: "drama",
         categoryLabel: "网剧特效",
         title: "仙侠飞剑斗法",
-        image: "images/8.png",
+        image: "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=800&auto=format&fit=crop",
         prompt: "\"Chinese xianxia drama style, a cultivator flying on a glowing blue sword through the clouds, magical energy trails, highly detailed CGI effect.\""
     },
     {

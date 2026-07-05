@@ -1,12 +1,27 @@
 const state = {
   activeFilter: 'all',
+  searchQuery: '',
 };
 
 const normalize = (value) => value.toLowerCase().trim();
 
-const getPromptText = (button) => {
-  const prompt = button.closest('.masonry-item')?.querySelector('.item-prompt');
-  return prompt?.textContent.trim().replace(/^"|"$/g, '') ?? '';
+// Global Toast Function
+const showToast = (message) => {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+        <path d="M20 6L9 17l-5-5"></path>
+    </svg>
+    ${message}
+  `;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add('fade-out');
+    setTimeout(() => toast.remove(), 300);
+  }, 2500);
 };
 
 const fallbackCopy = (text) => {
@@ -21,80 +36,91 @@ const fallbackCopy = (text) => {
   textarea.remove();
 };
 
-const showCopyState = (button, success) => {
-  const label = button.querySelector('span');
-  const original = button.dataset.originalLabel || label?.textContent || '复制提示词';
-
-  button.dataset.originalLabel = original;
-  button.classList.toggle('is-copied', success);
-  if (label) {
-    label.textContent = success ? '已复制' : '复制失败';
-  }
-
-  window.setTimeout(() => {
-    button.classList.remove('is-copied');
-    if (label) {
-      label.textContent = original;
+const copyText = async (text) => {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+    } else {
+      fallbackCopy(text);
     }
-  }, 1600);
+    showToast('提示词已复制到剪贴板！');
+  } catch {
+    showToast('复制失败，请重试');
+  }
+};
+
+const renderGallery = () => {
+  const container = document.getElementById('masonry-grid-container');
+  const emptyState = document.querySelector('.empty-state');
+  if (!container || typeof promptData === 'undefined') return;
+
+  const filteredData = promptData.filter(item => {
+    const matchesCategory = state.activeFilter === 'all' || item.category === state.activeFilter;
+    const content = normalize(`${item.title} ${item.prompt} ${item.categoryLabel}`);
+    const matchesQuery = state.searchQuery === '' || content.includes(state.searchQuery);
+    return matchesCategory && matchesQuery;
+  });
+
+  if (filteredData.length === 0) {
+    container.innerHTML = '';
+    if (emptyState) emptyState.hidden = false;
+    return;
+  }
+  if (emptyState) emptyState.hidden = true;
+
+  container.innerHTML = filteredData.map(item => {
+    const imgSrc = item.image ? item.image : `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23555'%3E即将发布 (Coming Soon)%3C/text%3E%3C/svg%3E`;
+    
+    return `
+      <article class="masonry-item reveal active" data-category="${item.category}">
+          <div class="item-image-wrapper ${item.image ? 'skeleton' : ''}">
+              <img src="${imgSrc}" alt="${item.title}" loading="lazy" onload="this.parentElement.classList.remove('skeleton')">
+          </div>
+          <div class="item-content">
+              <div class="item-category">${item.categoryLabel}</div>
+              <h3 class="item-title">${item.title}</h3>
+              <p class="item-prompt">${item.prompt}</p>
+              <div class="item-footer">
+                  <button class="btn-copy" aria-label="复制提示词" data-prompt="${encodeURIComponent(item.prompt)}">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg>
+                      <span>复制</span>
+                  </button>
+              </div>
+          </div>
+      </article>
+    `;
+  }).join('');
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const items = Array.from(document.querySelectorAll('.masonry-item'));
+  // Initial Render
+  renderGallery();
+
   const categoryButtons = Array.from(document.querySelectorAll('.category-btn'));
   const searchInput = document.querySelector('#prompt-search');
   const searchButton = document.querySelector('.search-btn');
-  const emptyState = document.querySelector('.empty-state');
 
   const applyFilters = () => {
-    const query = normalize(searchInput?.value ?? '');
-    let visibleCount = 0;
-
-    items.forEach((item) => {
-      const category = item.dataset.category || '';
-      const content = normalize(`${item.textContent} ${item.querySelector('img')?.alt ?? ''}`);
-      const matchesCategory = state.activeFilter === 'all' || category === state.activeFilter;
-      const matchesQuery = query === '' || content.includes(query);
-      const shouldShow = matchesCategory && matchesQuery;
-
-      item.hidden = !shouldShow;
-      if (shouldShow) {
-        visibleCount += 1;
-      }
-    });
-
-    if (emptyState) {
-      emptyState.hidden = visibleCount > 0;
-    }
+    state.searchQuery = normalize(searchInput?.value ?? '');
+    renderGallery();
   };
 
   categoryButtons.forEach((button) => {
     button.addEventListener('click', () => {
       state.activeFilter = button.dataset.filter || 'all';
-      if (searchInput) {
-        searchInput.value = '';
-      }
+      if (searchInput) searchInput.value = '';
       categoryButtons.forEach((candidate) => candidate.classList.toggle('active', candidate === button));
       applyFilters();
     });
   });
 
-  document.querySelectorAll('.btn-copy').forEach((button) => {
-    button.addEventListener('click', async (event) => {
-      event.stopPropagation();
-      const promptText = getPromptText(button);
-
-      try {
-        if (navigator.clipboard?.writeText) {
-          await navigator.clipboard.writeText(promptText);
-        } else {
-          fallbackCopy(promptText);
-        }
-        showCopyState(button, true);
-      } catch {
-        showCopyState(button, false);
-      }
-    });
+  // Event Delegation for Copy Buttons
+  document.getElementById('masonry-grid-container')?.addEventListener('click', (e) => {
+    const copyBtn = e.target.closest('.btn-copy');
+    if (copyBtn) {
+      const prompt = decodeURIComponent(copyBtn.dataset.prompt);
+      copyText(prompt);
+    }
   });
 
   searchInput?.addEventListener('input', applyFilters);
@@ -138,29 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let typeSpeed = isDeleting ? 30 : 80;
 
     if (!isDeleting && charIndex === currentPrompt.length) {
-      typeSpeed = 2000; // Pause at end
+      typeSpeed = 2000;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       promptIndex = (promptIndex + 1) % prompts.length;
-      typeSpeed = 500; // Pause before new word
+      typeSpeed = 500;
     }
     setTimeout(type, typeSpeed);
   };
   setTimeout(type, 1000);
-
-  // Scroll Reveal Animations
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
-
-  revealElements.forEach(el => revealObserver.observe(el));
 
   // Like Button Interaction
   const likeButtons = document.querySelectorAll('.btn-like');
@@ -169,11 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isLiked = this.classList.toggle('liked');
       const countSpan = this.querySelector('.like-count');
       let count = parseInt(this.dataset.likes, 10);
-      
-      if (isLiked) {
-        count += 1;
-      }
-      
+      if (isLiked) count += 1;
       this.dataset.likes = count;
       countSpan.textContent = count;
     });

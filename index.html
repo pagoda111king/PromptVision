@@ -15,6 +15,7 @@
     <meta property="og:locale" content="zh_CN">
     
     <link rel="stylesheet" href="index.css?v=20260705">
+    <script src="data.js?v=20260705" defer></script>
     <script src="script.js?v=20260705" defer></script>
 </head>
 <body>
@@ -87,268 +88,8 @@
 
     <!-- 提示词画廊 -->
     <main id="gallery" class="gallery-section">
-        <div class="container masonry">
-            
-            <!-- Item 1: 赛博朋克 -->
-            <article class="masonry-item reveal" data-category="cyberpunk">
-                <img src="images/cyberpunk.png" alt="赛博朋克风格未来城市街道 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Cyberpunk</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "A futuristic cyberpunk city street raining neon lights, reflective wet ground, hyper realistic, cinematic lighting, 8k, Unreal Engine 5."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 2: 好莱坞电影级 -->
-            <article class="masonry-item reveal" data-category="cinematic">
-                <img src="images/astronaut.png" alt="好莱坞电影级科幻宇航员 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Cinematic</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Cinematic shot of an astronaut looking at a glowing black hole, IMAX 70mm lens, highly detailed, dramatic lighting, interstellar style."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 3: 暗黑奇幻 -->
-            <article class="masonry-item reveal" data-category="fantasy">
-                <img src="images/knight.png" alt="暗黑奇幻哥特式城堡骑士 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Dark Fantasy</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Epic dark fantasy knight standing before a massive gothic castle, glowing red eyes in the dark, cinematic chiaroscuro, highly detailed armor."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 4: 动漫风格 -->
-            <article class="masonry-item reveal" data-category="anime">
-                <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800&auto=format&fit=crop" alt="日系动漫风格女孩与猫 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Anime</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Anime style illustration of a young girl with a black cat on her shoulder, cherry blossom falling, soft pastel colors, Makoto Shinkai style."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 5: 3D皮克斯 -->
-            <article class="masonry-item reveal" data-category="pixar">
-                <img src="images/monster.png" alt="3D皮克斯风格可爱毛绒怪兽 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">3D Pixar</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "3D Pixar style cute fluffy monster holding a glowing magical orb, detailed fur, vibrant colors, soft studio lighting, Octane render."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 6: 新中式水墨 -->
-            <article class="masonry-item reveal" data-category="ink">
-                <img src="https://images.unsplash.com/photo-1577464002476-eb369fec8cb8?q=80&w=800&auto=format&fit=crop" alt="新中式水墨山水画 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Chinese Ink</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Traditional Chinese ink wash painting of misty mountains and a solitary boat, elegant brush strokes, monochrome with a touch of red, ethereal atmosphere."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 7: 微距写实 -->
-            <article class="masonry-item reveal" data-category="macro">
-                <img src="https://images.unsplash.com/photo-1555562095-21dcb06b2529?q=80&w=800&auto=format&fit=crop" alt="微距写实带露珠的树叶 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Macro</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Extreme macro photography of morning dew drops on a vivid green leaf, highly detailed, sharp focus, beautiful bokeh background, natural lighting."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Item 8: 概念艺术 -->
-            <article class="masonry-item reveal" data-category="concept">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="未来科幻巨型机械结构概念艺术 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Concept Art</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Epic sci-fi concept art of a massive ancient alien structure hovering over a desert wasteland, cinematic composition, moody atmospheric lighting."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Item 9: 网剧特效 -->
-            <article class="masonry-item reveal" data-category="drama">
-                <img src="https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?q=80&w=800&auto=format&fit=crop" alt="高级网剧特效光影质感 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Drama Effects</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "High-end web drama cinematography, neon car lights reflected on a character's face, rainy night, moody blues and purples, anamorphic lens flare, masterpiece."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Item 10: 吉卜力手绘 -->
-            <article class="masonry-item reveal" data-category="ghibli">
-                <img src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?q=80&w=800&auto=format&fit=crop" alt="吉卜力手绘风格风景 AI绘画提示词" loading="lazy" decoding="async">
-                <div class="item-overlay">
-                    <span class="item-tag">Studio Ghibli</span>
-                    <div class="item-content">
-                        <p class="item-prompt">
-                            "Studio Ghibli style landscape, lush green hills, fluffy white clouds in a bright blue sky, a small magical cottage, hand drawn animation style, beautiful details."
-                        </p>
-                        <button class="btn-copy" type="button">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <span>复制提示词</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 9: 黑客帝国 -->
-            <article class="masonry-item reveal" data-category="cinematic">
-                <div class="item-image-wrapper">
-                    <img src="images/matrix.png" alt="黑客帝国风格特工代码雨 电影级画面 (The Matrix)" loading="lazy">
-                </div>
-                <div class="item-content">
-                    <div class="item-category">好莱坞电影 · 科幻</div>
-                    <h3 class="item-title">黑客帝国风格特工 (The Matrix)</h3>
-                    <p class="item-prompt">"Cinematic shot of a cyberpunk hacker in a dark room illuminated by glowing green digital code rain, The Matrix movie style, black sunglasses, highly detailed, Unreal Engine 5, 8k resolution"</p>
-                    <div class="item-footer">
-                        <button class="btn-copy" aria-label="复制提示词">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg>
-                            <span>复制</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 10: 废土风 -->
-            <article class="masonry-item reveal" data-category="cinematic">
-                <div class="item-image-wrapper">
-                    <img src="images/madmax.png" alt="疯狂的麦克斯废土风战车 废土末日 (Mad Max Wasteland)" loading="lazy">
-                </div>
-                <div class="item-content">
-                    <div class="item-category">好莱坞电影 · 废土</div>
-                    <h3 class="item-title">疯狂的麦克斯废土战车 (Mad Max)</h3>
-                    <p class="item-prompt">"Epic cinematic shot of a heavily modified rusty muscle car speeding through a post-apocalyptic desert wasteland, massive dust storm, Mad Max Fury Road style, aggressive spike armor, hyper realistic, dramatic lighting"</p>
-                    <div class="item-footer">
-                        <button class="btn-copy" aria-label="复制提示词">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg>
-                            <span>复制</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 11: 魔法电影 -->
-            <article class="masonry-item reveal" data-category="cinematic">
-                <div class="item-image-wrapper">
-                    <img src="images/magic.png" alt="哈利波特魔法学院图书馆 奇幻电影 (Harry Potter Magic)" loading="lazy">
-                </div>
-                <div class="item-content">
-                    <div class="item-category">好莱坞电影 · 奇幻</div>
-                    <h3 class="item-title">哈利波特魔法图书馆 (Harry Potter)</h3>
-                    <p class="item-prompt">"Cinematic interior of an ancient magical library, a young wizard holding a glowing wand, floating books, Harry Potter movie style, magical blue and gold lighting, highly detailed gothic architecture"</p>
-                    <div class="item-footer">
-                        <button class="btn-copy" aria-label="复制提示词">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg>
-                            <span>复制</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 12: 新海诚 -->
-            <article class="masonry-item reveal" data-category="anime">
-                <div class="item-image-wrapper">
-                    <img src="images/shinkai.png" alt="新海诚风格流星与云彩 唯美日本动画 (Makoto Shinkai Anime)" loading="lazy">
-                </div>
-                <div class="item-content">
-                    <div class="item-category">日本动画 · 唯美</div>
-                    <h3 class="item-title">新海诚风格流星天空 (Makoto Shinkai)</h3>
-                    <p class="item-prompt">"Breathtaking anime scenery of a young girl standing on a hill watching a massive glowing comet fall across a sunset sky, highly detailed beautiful clouds, Makoto Shinkai style, Your Name anime style, vibrant pastel colors, masterpiece"</p>
-                    <div class="item-footer">
-                        <button class="btn-copy" aria-label="复制提示词">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg>
-                            <span>复制</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Item 13: 吉卜力 -->
-            <article class="masonry-item reveal" data-category="anime">
-                <div class="item-image-wrapper">
-                    <img src="images/ghibli.png" alt="吉卜力工作室龙猫风格森林 精灵 (Studio Ghibli)" loading="lazy">
-                </div>
-                <div class="item-content">
-                    <div class="item-category">日本动画 · 治愈</div>
-                    <h3 class="item-title">吉卜力风格奇幻森林 (Studio Ghibli)</h3>
-                    <p class="item-prompt">"Studio Ghibli style watercolor illustration of a magical ancient forest with glowing blue spirits, a giant friendly fluffy creature sleeping under a massive mossy tree, Totoro style, lush green foliage, warm sunlight filtering through leaves"</p>
-                    <div class="item-footer">
-                        <button class="btn-copy" aria-label="复制提示词">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path></svg>
-                            <span>复制</span>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
+        <div class="container masonry" id="masonry-grid-container">
+            <!-- Items will be dynamically loaded here by script.js -->
         </div>
         <p class="empty-state container" hidden>没有找到匹配的提示词，换个关键词试试。</p>
     </main>
@@ -359,13 +100,13 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="user-info">
-                    <div class="avatar" style="background-color: #fca5a5;">SJ</div>
+                    <img src="https://i.pravatar.cc/150?img=47" alt="Sarah Jenkins" class="avatar-img">
                     <div>
                         <strong>Sarah Jenkins</strong>
-                        <span>Art Director</span>
+                        <span>Art Director 美术指导</span>
                     </div>
                 </div>
-                <p>"This picture prompt library changed my entire workflow. Finding the exact words to generate a cinematic picture used to take hours. Now it takes seconds."</p>
+                <p>"This picture prompt library changed my entire workflow. Finding the exact words to generate a cinematic picture used to take hours. Now it takes seconds."<br><br>“这个图片提示库改变了我整个工作流程。找到准确的词语来生成电影级画面，过去需要花费数小时。现在只需几秒钟。”</p>
                 <div class="testimonial-actions">
                     <button class="btn-like" type="button" data-likes="124">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
@@ -376,13 +117,13 @@
 
             <div class="testimonial-card">
                 <div class="user-info">
-                    <div class="avatar" style="background-color: #93c5fd;">DK</div>
+                    <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Felix&backgroundColor=93c5fd" alt="David Kim" class="avatar-img">
                     <div>
                         <strong>David Kim</strong>
-                        <span>Indie Game Developer</span>
+                        <span>Indie Game Developer 独立游戏开发者</span>
                     </div>
                 </div>
-                <p>"The cyberpunk and pixel art picture prompts are insanely accurate. PromptVision is the best resource for generating any game asset picture."</p>
+                <p>"The cyberpunk and pixel art picture prompts are insanely accurate. PromptVision is the best resource for generating any game asset picture."<br><br>“赛博朋克和像素艺术图片提示极其精准。PromptVision是生成任何游戏资源图片的最佳资源。”</p>
                 <div class="testimonial-actions">
                     <button class="btn-like" type="button" data-likes="89">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
@@ -470,6 +211,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
 
 </body>
 </html>

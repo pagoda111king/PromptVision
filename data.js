@@ -18,7 +18,7 @@ const promptData = [
     },
     {
         id: 3,
-        category: "darkfantasy",
+        category: "fantasy",
         categoryLabel: "暗黑奇幻",
         title: "哥特式城堡骑士",
         image: "images/knight.png",
@@ -42,7 +42,7 @@ const promptData = [
     },
     {
         id: 6,
-        category: "chineseink",
+        category: "ink",
         categoryLabel: "新中式水墨",
         title: "水墨画里的孤舟",
         image: "https://images.unsplash.com/photo-1577047321590-3490ea47f523?q=80&w=800&auto=format&fit=crop",
@@ -98,8 +98,8 @@ const promptData = [
     },
     {
         id: 13,
-        category: "anime",
-        categoryLabel: "日本动画 · 治愈",
+        category: "ghibli",
+        categoryLabel: "吉卜力手绘",
         title: "吉卜力风格奇幻森林 (Studio Ghibli)",
         image: "images/ghibli.png",
         prompt: "\"Studio Ghibli style watercolor illustration of a magical ancient forest with glowing blue spirits, a giant friendly fluffy creature sleeping under a massive mossy tree, Totoro style, lush green foliage, warm sunlight filtering through leaves\""
@@ -108,7 +108,7 @@ const promptData = [
     // NEW 30 ITEMS (7 Generated, 23 Placeholders)
     {
         id: 14,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "概念艺术 · 蒸汽朋克",
         title: "蒸汽朋克机械之城 (Steampunk)",
         image: "images/steampunk.png",
@@ -124,7 +124,7 @@ const promptData = [
     },
     {
         id: 16,
-        category: "chineseink",
+        category: "ink",
         categoryLabel: "传统艺术 · 浮世绘",
         title: "富士山下武士 (Ukiyo-e)",
         image: "images/ukiyoe.png",
@@ -148,7 +148,7 @@ const promptData = [
     },
     {
         id: 19,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "纸艺 · 折纸",
         title: "史诗级纸龙 (Origami)",
         image: "images/origami.png",
@@ -167,183 +167,183 @@ const promptData = [
         category: "cinematic",
         categoryLabel: "电影感 · 黑色电影",
         title: "霓虹黑色侦探 (Neon Noir)",
-        image: "",
-        prompt: "\"Neon noir cinematic shot of a detective in a trench coat standing in a dark rainy alleyway illuminated by a glowing red neon sign, high contrast, dramatic shadows, highly detailed\""
+        image: "https://image.pollinations.ai/prompt/Neon%20Noir%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Neon noir cinematic shot of a detective in a trench coat standing in a dark rainy alleyway illuminated by a glowing red neon sign, high contrast, dramatic shadows, highly detailed\""
     },
     {
         id: 22,
         category: "macro",
         categoryLabel: "微距 · 生物发光",
         title: "发光毒蘑菇 (Bioluminescence)",
-        image: "",
-        prompt: "\"Extreme macro photography of glowing bioluminescent mushrooms in a dark magical forest, glowing blue and purple spores, highly detailed, sharp focus, ethereal lighting, bokeh\""
+        image: "https://image.pollinations.ai/prompt/Bioluminescence%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Extreme macro photography of glowing bioluminescent mushrooms in a dark magical forest, glowing blue and purple spores, highly detailed, sharp focus, ethereal lighting, bokeh\""
     },
     {
         id: 23,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "艺术 · 水彩",
         title: "雨中欧洲小镇 (Watercolor)",
-        image: "",
-        prompt: "\"Beautiful watercolor painting of a romantic European street cafe in the rain, loose brush strokes, vibrant colors bleeding, architectural sketch style, masterpiece\""
+        image: "https://image.pollinations.ai/prompt/Watercolor%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Beautiful watercolor painting of a romantic European street cafe in the rain, loose brush strokes, vibrant colors bleeding, architectural sketch style, masterpiece\""
     },
     {
         id: 24,
         category: "anime",
         categoryLabel: "动画 · 赛博朋克",
         title: "赛博格少女 (Cyber Anime)",
-        image: "",
-        prompt: "\"90s anime style, gorgeous cyborg girl looking over a futuristic neon city from a balcony, highly detailed, Ghost in the Shell aesthetic, masterpiece\""
+        image: "https://image.pollinations.ai/prompt/Cyber%20Anime%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"90s anime style, gorgeous cyborg girl looking over a futuristic neon city from a balcony, highly detailed, Ghost in the Shell aesthetic, masterpiece\""
     },
     {
         id: 25,
         category: "cinematic",
         categoryLabel: "电影级 · 史诗奇幻",
         title: "指环王精灵之城 (Epic Fantasy)",
-        image: "",
-        prompt: "\"Epic cinematic establishing shot of a majestic elven city built into massive waterfalls, Lord of the Rings style, golden hour, highly detailed architecture, 8k, Unreal Engine 5\""
+        image: "https://image.pollinations.ai/prompt/Epic%20Fantasy%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Epic cinematic establishing shot of a majestic elven city built into massive waterfalls, Lord of the Rings style, golden hour, highly detailed architecture, 8k, Unreal Engine 5\""
     },
     {
         id: 26,
-        category: "darkfantasy",
+        category: "fantasy",
         categoryLabel: "暗黑奇幻 · 魂系",
         title: "深渊骑士 (Souls-like)",
-        image: "",
-        prompt: "\"Dark fantasy souls-like boss, a giant rotting knight wielding a cursed flaming sword in a ruined cathedral, terrifying atmosphere, volumetric fog, hyper realistic\""
+        image: "https://image.pollinations.ai/prompt/Souls-like%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Dark fantasy souls-like boss, a giant rotting knight wielding a cursed flaming sword in a ruined cathedral, terrifying atmosphere, volumetric fog, hyper realistic\""
     },
     {
         id: 27,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "概念设计 · 异星风景",
         title: "异星奇异植物 (Alien Planet)",
-        image: "",
-        prompt: "\"Sci-fi concept art of an alien planet landscape, massive floating crystals, bizarre glowing flora, two moons in the sky, highly detailed, cinematic lighting\""
+        image: "https://image.pollinations.ai/prompt/Alien%20Planet%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Sci-fi concept art of an alien planet landscape, massive floating crystals, bizarre glowing flora, two moons in the sky, highly detailed, cinematic lighting\""
     },
     {
         id: 28,
         category: "pixar",
         categoryLabel: "3D皮克斯 · 机械",
         title: "呆萌生锈机器人 (Cute Robot)",
-        image: "",
-        prompt: "\"Cute 3D Pixar style rusty little robot holding a single glowing green plant, Wall-E aesthetic, soft studio lighting, highly detailed textures, masterpiece\""
+        image: "https://image.pollinations.ai/prompt/Cute%20Robot%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Cute 3D Pixar style rusty little robot holding a single glowing green plant, Wall-E aesthetic, soft studio lighting, highly detailed textures, masterpiece\""
     },
     {
         id: 29,
-        category: "chineseink",
+        category: "ink",
         categoryLabel: "新中式 · 工笔",
         title: "工笔画青花瓷与猫 (Gongbi)",
-        image: "",
-        prompt: "\"Traditional Chinese Gongbi style painting, a delicate white cat playing with a blue and white porcelain vase, highly detailed fine lines, elegant composition\""
+        image: "https://image.pollinations.ai/prompt/Gongbi%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Traditional Chinese Gongbi style painting, a delicate white cat playing with a blue and white porcelain vase, highly detailed fine lines, elegant composition\""
     },
     {
         id: 30,
         category: "macro",
         categoryLabel: "美食摄影 · 商业",
         title: "爆浆芝士汉堡 (Food Photography)",
-        image: "",
-        prompt: "\"Commercial food photography of a juicy double cheeseburger, melted cheese dripping, flying ingredients, dark background, cinematic dramatic lighting, highly detailed\""
+        image: "https://image.pollinations.ai/prompt/Food%20Photography%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Commercial food photography of a juicy double cheeseburger, melted cheese dripping, flying ingredients, dark background, cinematic dramatic lighting, highly detailed\""
     },
     {
         id: 31,
         category: "drama",
         categoryLabel: "电视剧 · 宫廷",
         title: "清宫戏女主角 (Palace Drama)",
-        image: "",
-        prompt: "\"Chinese historical palace drama style, a beautiful queen in highly detailed embroidered silk robes standing in the forbidden city snowing, cinematic lighting, 8k\""
+        image: "https://image.pollinations.ai/prompt/Palace%20Drama%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Chinese historical palace drama style, a beautiful queen in highly detailed embroidered silk robes standing in the forbidden city snowing, cinematic lighting, 8k\""
     },
     {
         id: 32,
         category: "cinematic",
         categoryLabel: "好莱坞 · 怪兽",
         title: "深海巨兽复苏 (Kaiju)",
-        image: "",
-        prompt: "\"Cinematic shot of a massive terrifying kaiju monster rising from the stormy ocean, lightning striking, Pacific Rim style, dramatic lighting, highly detailed, 8k\""
+        image: "https://image.pollinations.ai/prompt/Kaiju%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Cinematic shot of a massive terrifying kaiju monster rising from the stormy ocean, lightning striking, Pacific Rim style, dramatic lighting, highly detailed, 8k\""
     },
     {
         id: 33,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "建筑 · 未来主义",
         title: "扎哈风格未来建筑 (Futurist)",
-        image: "",
-        prompt: "\"Architectural visualization of a futuristic Zaha Hadid style curved building covered in lush green plants, sunny day, hyper realistic, Octane render\""
+        image: "https://image.pollinations.ai/prompt/Futurist%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Architectural visualization of a futuristic Zaha Hadid style curved building covered in lush green plants, sunny day, hyper realistic, Octane render\""
     },
     {
         id: 34,
         category: "anime",
         categoryLabel: "插画 · 治愈系",
         title: "云端上的列车 (Healing)",
-        image: "",
-        prompt: "\"Beautiful magical anime illustration of a vintage steam train driving across a track made of clouds in a starry night sky, Ghibli inspired, highly detailed, masterpiece\""
+        image: "https://image.pollinations.ai/prompt/Healing%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Beautiful magical anime illustration of a vintage steam train driving across a track made of clouds in a starry night sky, Ghibli inspired, highly detailed, masterpiece\""
     },
     {
         id: 35,
-        category: "darkfantasy",
+        category: "fantasy",
         categoryLabel: "奇幻 · 克苏鲁",
         title: "深海不可名状 (Cthulhu)",
-        image: "",
-        prompt: "\"Lovecraftian horror, a massive terrifying tentacled entity looming in the thick green fog over a Victorian fishing village, dark fantasy, highly detailed, unsettling atmosphere\""
+        image: "https://image.pollinations.ai/prompt/Cthulhu%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Lovecraftian horror, a massive terrifying tentacled entity looming in the thick green fog over a Victorian fishing village, dark fantasy, highly detailed, unsettling atmosphere\""
     },
     {
         id: 36,
         category: "cyberpunk",
         categoryLabel: "赛博朋克 · 载具",
         title: "霓虹悬浮摩托 (Hoverbike)",
-        image: "",
-        prompt: "\"Cyberpunk hoverbike parked in a rainy neon alley, Akira style, highly detailed mechanical parts, wet reflective ground, cinematic lighting, 8k\""
+        image: "https://image.pollinations.ai/prompt/Hoverbike%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Cyberpunk hoverbike parked in a rainy neon alley, Akira style, highly detailed mechanical parts, wet reflective ground, cinematic lighting, 8k\""
     },
     {
         id: 37,
         category: "pixar",
         categoryLabel: "3D卡通 · 动物",
         title: "穿西装的狗 (Dapper Dog)",
-        image: "",
-        prompt: "\"3D cartoon rendering of a golden retriever wearing a tailored suit and tie, sipping coffee, Zootopia style, highly detailed fur, studio lighting, cute\""
+        image: "https://image.pollinations.ai/prompt/Dapper%20Dog%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"3D cartoon rendering of a golden retriever wearing a tailored suit and tie, sipping coffee, Zootopia style, highly detailed fur, studio lighting, cute\""
     },
     {
         id: 38,
         category: "macro",
         categoryLabel: "微距 · 机械核心",
         title: "瑞士手表机芯 (Watch Macro)",
-        image: "",
-        prompt: "\"Extreme macro photography of the intricate gears inside a luxury Swiss watch, golden components, ruby bearings, highly detailed, sharp focus, cinematic lighting\""
+        image: "https://image.pollinations.ai/prompt/Watch%20Macro%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Extreme macro photography of the intricate gears inside a luxury Swiss watch, golden components, ruby bearings, highly detailed, sharp focus, cinematic lighting\""
     },
     {
         id: 39,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "低多边形 · 风景",
         title: "低多边形森林 (Low Poly)",
-        image: "",
-        prompt: "\"Beautiful low poly 3D landscape of a pine forest and a small cabin, flat shading, vibrant colors, sunset lighting, minimalist aesthetic, isometric view\""
+        image: "https://image.pollinations.ai/prompt/Low%20Poly%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Beautiful low poly 3D landscape of a pine forest and a small cabin, flat shading, vibrant colors, sunset lighting, minimalist aesthetic, isometric view\""
     },
     {
         id: 40,
         category: "cinematic",
         categoryLabel: "电影感 · 战争",
         title: "二战史诗战役 (War Epic)",
-        image: "",
-        prompt: "\"Cinematic shot of soldiers storming a beach, explosions in the background, Saving Private Ryan style, gritty realistic texture, dramatic lighting, highly detailed\""
+        image: "https://image.pollinations.ai/prompt/War%20Epic%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Cinematic shot of soldiers storming a beach, explosions in the background, Saving Private Ryan style, gritty realistic texture, dramatic lighting, highly detailed\""
     },
     {
         id: 41,
-        category: "chineseink",
+        category: "ink",
         categoryLabel: "国风 · 赛博",
         title: "赛博道士 (Cyber Daoist)",
-        image: "",
-        prompt: "\"Cyberpunk traditional Chinese Daoist monk holding a glowing neon talisman, rainy futuristic temple, highly detailed, cinematic lighting, masterpiece\""
+        image: "https://image.pollinations.ai/prompt/Cyber%20Daoist%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Cyberpunk traditional Chinese Daoist monk holding a glowing neon talisman, rainy futuristic temple, highly detailed, cinematic lighting, masterpiece\""
     },
     {
         id: 42,
         category: "anime",
         categoryLabel: "动漫 · 机甲",
         title: "巨型机甲整备 (Mecha)",
-        image: "",
-        prompt: "\"Gundam style anime illustration, a massive highly detailed mecha robot being repaired in a futuristic hangar, sparks flying, cinematic lighting, 8k\""
+        image: "https://image.pollinations.ai/prompt/Mecha%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Gundam style anime illustration, a massive highly detailed mecha robot being repaired in a futuristic hangar, sparks flying, cinematic lighting, 8k\""
     },
     {
         id: 43,
-        category: "conceptart",
+        category: "concept",
         categoryLabel: "极简艺术 · 剪影",
         title: "山巅剑客剪影 (Silhouette)",
-        image: "",
-        prompt: "\"Minimalist vector art silhouette of a lone swordsman standing on a cliff against a massive red sun, dramatic contrast, elegant composition, masterpiece\""
+        image: "https://image.pollinations.ai/prompt/Silhouette%20masterpiece%20highly%20detailed?width=800&height=600&nologo=true",
+prompt: "\"Minimalist vector art silhouette of a lone swordsman standing on a cliff against a massive red sun, dramatic contrast, elegant composition, masterpiece\""
     }
 ];

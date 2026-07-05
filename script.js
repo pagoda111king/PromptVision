@@ -161,4 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
 
   revealElements.forEach(el => revealObserver.observe(el));
+
+  // Like Button Interaction
+  const likeButtons = document.querySelectorAll('.btn-like');
+  likeButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const isLiked = this.classList.toggle('liked');
+      const countSpan = this.querySelector('.like-count');
+      let count = parseInt(this.dataset.likes, 10);
+      
+      if (isLiked) {
+        count += 1;
+      }
+      
+      this.dataset.likes = count;
+      countSpan.textContent = count;
+    });
+  });
 });

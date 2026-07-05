@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "promptvision-static-site",
+  "mode": "active_light",
+  "policy": "local_first_minimal_global_context",
+  "indexes": [
+    "README.md",
+    "PROJECT.md"
+  ],
+  "reusable_assets": [
+    {
+      "type": "gate",
+      "id": "static-site-release-gate",
+      "name": "Static Site Release Gate",
+      "storage_location": "PROJECT.md#release-gate"
+    }
+  ]
+}
